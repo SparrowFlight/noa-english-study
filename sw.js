@@ -1,4 +1,4 @@
-const CACHE = "noa-english-study-v14";
+const CACHE = "noa-english-study-v15";
 const ASSETS = [
   "./",
   "./index.html",

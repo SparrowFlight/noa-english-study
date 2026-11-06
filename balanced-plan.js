@@ -261,3 +261,154 @@ window.PERSONAL_DAILY_MATERIALS = {
     "Cambridge Units 1–14, 26–50, 92–97, 121–136 按错题回看；新概念2 Lesson 14 复述；基线复测"
   ]
 };
+
+window.PERSONAL_DAILY_MESSAGES = {
+  1: [
+    "请本地同事评价昨天ICC/APA试用：感受、问题、优化建议。",
+    "感谢对方反馈，并用两句英文准确概括他的核心观点。",
+    "说明摩托车场景下系统必须平衡安全与通行效率。",
+    "追问问题发生的时间、地点、车速、视频或日志。",
+    "确认下周司机安排：人数、日期、开始时间、集合地点。",
+    "重写本周最不满意的一条真实工作消息。"
+  ],
+  2: [
+    "发一条会议开场：说明目的、议程和预计时长。",
+    "向对方确认本地配置指功能范围还是硬件配置。",
+    "会议中没听懂时，请对方重复并解释一个关键词。",
+    "会后发出决定和三条行动项。",
+    "确认下一次更新时间、负责人和交付物。",
+    "把一条真实会议消息改成五句以内的清晰版本。"
+  ],
+  3: [
+    "写五行状态更新：Completed / In progress / Risk / Next step。",
+    "说明延期原因、影响和新的暂定时间。",
+    "确认下一里程碑及其依赖条件。",
+    "请求对方在指定日期前提供数据或决定。",
+    "确认行动项负责人和截止时间。",
+    "检查本周一封真实邮件中的时态和日期表达。"
+  ],
+  4: [
+    "向分部概括首发功能范围。",
+    "说明配置取决于车型、传感器和软件版本。",
+    "询问当地市场对功能和配置的具体要求。",
+    "说明驾驶员责任和系统使用边界。",
+    "向研发索取车型功能矩阵。",
+    "写三条产品配置FAQ。"
+  ],
+  5: [
+    "描述一个问题的现象、条件和出现频率。",
+    "明确区分已确认事实和根因假设。",
+    "请求同步日志、视频和相关时间戳。",
+    "提出一个临时缓解方案。",
+    "请求对方在指定时间前做决定。",
+    "向研发转述分部反馈，并说明影响范围。"
+  ],
+  6: [
+    "说明一个开发里程碑和关键依赖。",
+    "区分engineering target和committed date。",
+    "确认首发配置和范围是否保持不变。",
+    "给出缩范围、延时间、分阶段发布三个选项。",
+    "向分部说明计划更新，不制造过度承诺。",
+    "把一条模糊计划改成有日期、有依赖、有负责人的版本。"
+  ],
+  7: [
+    "向研发提出五个问题：status、blocker、owner、evidence、next update。",
+    "用reported speech复述研发结论。",
+    "按confirmed/observed/likely/possible/unknown标注证据。",
+    "把研发结论翻译成分部可以执行的行动。",
+    "发出会议纪要：facts、decisions、open issues、actions。",
+    "验证每条行动项是否都有负责人和日期。"
+  ],
+  8: [
+    "确认当地需求的提出人、客户场景和期望时间。",
+    "说明当前技术约束对市场承诺的影响。",
+    "礼貌表达不同意，并给出替代方案。",
+    "确认今天会议达成的决定。",
+    "给分部发送一段研发口径和市场行动的对照说明。",
+    "写一段研发—市场桥梁角色总结。"
+  ],
+  9: [
+    "写风险邮件：Risk / Evidence / Impact / Mitigation / Decision。",
+    "说明发布前必须关闭的依赖。",
+    "请求区域团队确认首发范围。",
+    "发出发布准备状态更新。",
+    "说明哪些内容可以对外，哪些仍属未确认。",
+    "把一条风险信息压缩成三句话。"
+  ],
+  10: [
+    "写五行技术状态邮件。",
+    "向研发提出一个可回答、可验证的技术问题。",
+    "发送风险升级邮件。",
+    "发出会议纪要并标注待决事项。",
+    "用企微三行式跟进：背景、请求、时间。",
+    "审计并重写本周真实邮件。"
+  ],
+  11: [
+    "发送PPT预告：主题、目的、需要对方准备什么。",
+    "用用户、系统、算法三层解释一张架构图。",
+    "说明一项验证结果及证据限制。",
+    "写一个问答后的跟进回复。",
+    "发送演示后的决定和行动项。",
+    "把一个中文名词标题改成完整英文结论句。"
+  ],
+  12: [
+    "发出分部产品会纪要和下一步。",
+    "向研发确认技术会行动项。",
+    "写技术问答后的补充说明。",
+    "发出出差结束后的总结和后续计划。",
+    "写一段综合能力复盘。",
+    "发送14天/12周复测安排。"
+  ]
+};
+
+window.PERSONAL_PHRASES.push(
+  { zh: "早上好，感谢你参加昨天的测试。", en: "Good morning. Thanks for joining yesterday's test.", cat: "企微", level: 1 },
+  { zh: "你觉得ICC和APA功能怎么样？", en: "How did you find the ICC and APA features?", cat: "企微", level: 1 },
+  { zh: "你遇到了什么问题吗？", en: "Did you run into any issues?", cat: "企微", level: 1 },
+  { zh: "我同意你的判断。", en: "I agree with your assessment.", cat: "反馈", level: 1 },
+  { zh: "摩托车行为是ICC的重大挑战。", en: "Motorcycle behavior is a major challenge for ICC.", cat: "技术", level: 2 },
+  { zh: "系统必须平衡自车、其他道路使用者和通行效率。", en: "The system has to balance safety for the ego vehicle, other road users, and traffic efficiency.", cat: "技术", level: 3 },
+  { zh: "基于我们本周观察到的现象……", en: "Based on what we observed this week ...", cat: "反馈", level: 1 },
+  { zh: "我建议现阶段将ICC限制在高速场景。", en: "I would recommend limiting ICC to highway use for now.", cat: "建议", level: 2 },
+  { zh: "研发仍在测试并优化APA corner cases。", en: "R&D is still testing and optimizing APA corner cases.", cat: "产品", level: 2 },
+  { zh: "能否分享发生时间、地点以及视频或日志？", en: "Could you share the time, location, and any video or logs?", cat: "证据", level: 2 },
+  { zh: "下周测试需要一名司机，周一到周五。", en: "We'll need one driver for next week's testing from Monday to Friday.", cat: "安排", level: 1 },
+  { zh: "能否确认每天开始时间和集合地点？", en: "Could you confirm the daily start time and pickup location?", cat: "安排", level: 1 },
+  { zh: "我们需要视频和日志证据来确认是否可复现。", en: "We need video and log evidence to confirm whether the issue is reproducible.", cat: "证据", level: 2 },
+  { zh: "这件事对当地测试和发布计划有什么影响？", en: "What is the impact on the local test and launch plan?", cat: "风险", level: 2 },
+  { zh: "这是计划中的功能，不是已确认发布承诺。", en: "This is a planned feature, not a confirmed launch commitment.", cat: "边界", level: 2 }
+);
+
+window.PERSONAL_SCENARIOS.unshift(
+  {
+    id: "feedback-followup",
+    title: "企微反馈闭环",
+    subtitle: "询问、感谢、概括、证据、下一步",
+    level: "当前最高频",
+    dialogue: [
+      ["You", "Good morning, Kristoff. Thanks for joining yesterday's test. How did you find the ICC and APA features?"],
+      ["Partner", "APA was excellent in tight spaces. ICC felt uncomfortable in city traffic because motorcycles kept filtering into the lane."],
+      ["You", "Thank you for the detailed feedback. I agree with your assessment."],
+      ["You", "The system has to balance safety for the ego vehicle and other road users with traffic efficiency."],
+      ["You", "Given local conditions, I would also recommend limiting ICC to highway use for now."],
+      ["You", "Could you share a few examples, including the time, location, and any video or logs?"],
+      ["Partner", "Sure, I'll send the videos this afternoon."],
+      ["You", "Thanks. I'll pass them to R&D and confirm the next step after their review."]
+    ]
+  },
+  {
+    id: "schedule-confirm",
+    title: "司机与测试安排确认",
+    subtitle: "人数、日期、时间、地点、下一步",
+    level: "任务闭环",
+    dialogue: [
+      ["Partner", "What driver support do you need next week?"],
+      ["You", "We'll need one driver for next week's testing from Monday to Friday."],
+      ["Partner", "What time should the driver start?"],
+      ["You", "Could you confirm the daily start time and pickup location?"],
+      ["Partner", "We can start at eight thirty at the hotel lobby."],
+      ["You", "Just to confirm, one driver, Monday to Friday, starting at eight thirty at the hotel lobby."],
+      ["You", "Please let me know if the test site changes."]
+    ]
+  }
+);

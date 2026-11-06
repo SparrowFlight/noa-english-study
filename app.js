@@ -162,9 +162,11 @@
     }
   ];
   const dailyMaterials = window.PERSONAL_DAILY_MATERIALS || {};
+  const dailyMessages = window.PERSONAL_DAILY_MESSAGES || {};
   weeks.forEach((week) => {
     week.days.forEach((day, index) => {
       day[3] = dailyMaterials[week.number]?.[index] || "";
+      day[4] = dailyMessages[week.number]?.[index] || "";
     });
   });
 
@@ -484,12 +486,13 @@
           <p class="eyebrow">${greeting} · 第 ${state.currentWeek} 周</p>
           <h1>${escapeHTML(week.title)}</h1>
           <p class="lead">${escapeHTML(week.goal)}。每天只完成“01 今天”的流程，其他标签不需要每天打开。</p>
-          <div class="daily-flow" aria-label="今日五步流程">
+          <div class="daily-flow" aria-label="今日六步流程">
             <span><b>1</b>回忆 ${sessionTimes[0]}′</span>
             <span><b>2</b>教材 ${sessionTimes[1]}′</span>
             <span><b>3</b>跟读 ${sessionTimes[2]}′</span>
-            <span><b>4</b>开口 ${sessionTimes[3]}′</span>
-            <span><b>5</b>记录 ${sessionTimes[4]}′</span>
+            <span><b>4</b>工作消息 ${sessionTimes[3]}′</span>
+            <span><b>5</b>口头复述 ${sessionTimes[4]}′</span>
+            <span><b>6</b>记录 ${sessionTimes[5]}′</span>
           </div>
           <div class="hero-actions">
             <button class="primary-button" data-action="start-today"><kbd>Enter</kbd> ${todayDone ? "今天已完成 · 继续下一天（选做）" : `开始今天的 ${state.settings.dailyMinutes} 分钟`}</button>
@@ -501,6 +504,7 @@
           <h2>${escapeHTML(day[0])}</h2>
           <p class="muted">${escapeHTML(day[1])}</p>
           <p class="material-line"><strong>今日教材</strong><br>${escapeHTML(day[3] || "按当天任务打开对应章节")}</p>
+          <p class="message-line"><strong>今日工作消息</strong><br>${escapeHTML(day[4] || "写一条真实工作消息")}</p>
           <div class="today-meta">
             <span>${todayDone ? "今天已完成，建议结束" : "今天必做"}</span>
             <span>${currentPhase.title}</span>
@@ -613,6 +617,7 @@
                   <strong>${escapeHTML(day[0])}</strong>
                   <small>${escapeHTML(day[1])}</small>
                   <small class="day-material">${escapeHTML(day[3] || "章节未设置")}</small>
+                  <small class="day-message">${escapeHTML(day[4] || "工作消息未设置")}</small>
                 </span>
                 <span class="status-pill ${done ? "done" : ""}">${done ? "已完成" : "开始"}</span>
               </button>
@@ -1382,15 +1387,23 @@
         answer: "只有自己听不清、对方也可能听错的地方才反复纠。"
       },
       {
-        title: "关掉材料，真实开口",
+        title: "写一条真实工作消息",
         minutes: times[3],
+        instruction: "按今天的企微场景先独立写英文，再用“背景—结论—证据/限制—请求—下一步”检查。消息不确定时先写，不发送，改完后再发。",
+        material: day[4],
+        prompt: day[4],
+        answer: "先保证事实、请求和下一步清楚，再检查问句、时态、情态动词和单复数。"
+      },
+      {
+        title: "关掉材料，真实开口",
+        minutes: times[4],
         instruction: "按今天的任务做2分钟无稿录音。卡住时先用救场句，再继续，不要重来十遍。",
         prompt: day[1],
         answer: "Sorry, could you say that again more slowly? / Let me rephrase that."
       },
       {
         title: "只记三件事",
-        minutes: times[4],
+        minutes: times[5],
         instruction: "写下：一个说不出的中文意思、一个好用句块、一个听错的声音。明天开头先复习。",
         prompt: "1个不会说 + 1个新句块 + 1个听错处",
         answer: day[2]
@@ -1399,9 +1412,9 @@
   }
 
   function getSessionTimes(minutes) {
-    if (minutes === 20) return [2, 6, 4, 6, 2];
-    if (minutes === 90) return [10, 20, 20, 30, 10];
-    return [5, 10, 10, 15, 5];
+    if (minutes === 20) return [2, 6, 3, 5, 2, 2];
+    if (minutes === 90) return [10, 20, 15, 20, 15, 10];
+    return [5, 10, 8, 10, 7, 5];
   }
 
   function renderSession() {

@@ -431,6 +431,22 @@ h3 {
   letter-spacing: .06em;
 }
 
+.message-line {
+  margin: 10px 0 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: var(--ink-soft);
+  background: #fff2df;
+  font-size: .65em;
+  line-height: 1.45;
+}
+
+.message-line strong {
+  color: var(--accent);
+  font-size: .85em;
+  letter-spacing: .06em;
+}
+
 .today-meta {
   display: flex;
   justify-content: space-between;
@@ -567,6 +583,13 @@ h3 {
   color: var(--green);
   font-size: .82em;
   font-weight: 750;
+}
+
+.week-row .day-message {
+  display: block;
+  margin-top: 5px;
+  color: #9d4d2c;
+  font-size: .78em;
 }
 
 .week-badge {

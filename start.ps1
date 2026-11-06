@@ -3,7 +3,7 @@ $port = 8766
 $appRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $appRoot
 $cacheBuster = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
-$appUrl = "http://localhost:$port/index.html?v=15&run=$cacheBuster"
+$appUrl = "http://localhost:$port/index.html?v=16&run=$cacheBuster"
 
 $lanIp = Get-NetIPAddress -AddressFamily IPv4 -ErrorAction SilentlyContinue |
   Where-Object {
@@ -18,7 +18,7 @@ Write-Host ""
 Write-Host "NOA English Study is starting." -ForegroundColor Green
 Write-Host "Computer: $appUrl"
 if ($lanIp) {
-  Write-Host "iPhone:   http://${lanIp}:$port/index.html?v=15"
+  Write-Host "iPhone:   http://${lanIp}:$port/index.html?v=16"
 } else {
   Write-Host "iPhone:   No LAN address found. Check the Wi-Fi connection."
 }
